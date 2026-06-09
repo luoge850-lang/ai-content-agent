@@ -1,0 +1,233 @@
+/* ================================================================== */
+/*  Rolodex Gallery — Swiss-style 3D scroll-driven ring               */
+/* ================================================================== */
+
+.rolodex-root {
+  display: flex;
+  width: 100%;
+  min-height: 680px;
+  gap: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/*  LEFT PANEL — Content info                                         */
+/* ------------------------------------------------------------------ */
+
+.rolodex-left {
+  flex: 0 0 38%;
+  display: flex;
+  align-items: flex-start;
+  padding: 48px 40px 48px 0;
+  position: relative;
+  z-index: 20;
+}
+
+.rolodex-left-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.rolodex-title {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #111;
+  margin: 0;
+}
+
+.rolodex-desc {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 360px;
+  margin: 0;
+}
+
+.rolodex-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid #111;
+  transition: gap 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  align-self: flex-start;
+}
+
+.rolodex-link:hover {
+  gap: 14px;
+}
+
+.rolodex-link-arrow {
+  display: inline-flex;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rolodex-link:hover .rolodex-link-arrow {
+  transform: translate(4px, -4px);
+}
+
+.rolodex-cover {
+  margin-top: 12px;
+  width: 180px;
+  height: 252px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  background: #f9f9f9;
+}
+
+.rolodex-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rolodex-cover:hover .rolodex-cover-img {
+  transform: scale(1.06);
+}
+
+/* ------------------------------------------------------------------ */
+/*  RIGHT PANEL — 3D Stage                                           */
+/* ------------------------------------------------------------------ */
+
+.rolodex-right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fcfcfc;
+}
+
+.rolodex-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.rolodex-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ---- Card slot — positioned in 3D ---- */
+.rolodex-card-slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: filter 0.5s ease;
+}
+
+/* Slightly dim non-active cards */
+.rolodex-card-slot:not(.is-active) {
+  filter: brightness(0.65);
+}
+
+.rolodex-card-slot.is-active {
+  filter: brightness(1);
+}
+
+/* ---- Card ---- */
+.rolodex-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(17, 17, 17, 0.06);
+  transition: box-shadow 0.5s ease;
+}
+
+.rolodex-card-slot.is-active .rolodex-card {
+  box-shadow: 0 4px 28px rgba(17, 17, 17, 0.14), 0 0 0 1px rgba(17, 17, 17, 0.08);
+}
+
+.rolodex-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rolodex-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Edge gradients — depth atmosphere                                */
+/* ------------------------------------------------------------------ */
+
+.rolodex-gradient-left,
+.rolodex-gradient-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.rolodex-gradient-left {
+  left: 0;
+  background: linear-gradient(to right, #fcfcfc 20%, transparent 100%);
+}
+
+.rolodex-gradient-right {
+  right: 0;
+  background: linear-gradient(to left, #fcfcfc 20%, transparent 100%);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Responsive                                                        */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .rolodex-root {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .rolodex-left {
+    flex: 0 0 auto;
+    padding: 24px 0;
+  }
+
+  .rolodex-right {
+    min-height: 420px;
+  }
+
+  .rolodex-gradient-left,
+  .rolodex-gradient-right {
+    width: 60px;
+  }
+}
