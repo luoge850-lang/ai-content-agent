@@ -1,12 +1,12 @@
 "use client";
 
-import { Bot, CalendarClock, FileText, ImageIcon, Radio, Send } from "lucide-react";
+import { Bot, CalendarClock, FileText, Image, Radio, Send } from "lucide-react";
 
 const items = [
   { label: "Product Link", icon: Bot },
   { label: "Audience Signal", icon: Radio },
   { label: "Platform Copy", icon: FileText },
-  { label: "Image Direction", icon: ImageIcon },
+  { label: "Image Direction", icon: Image },
   { label: "Schedule Plan", icon: CalendarClock },
   { label: "Publish Queue", icon: Send }
 ];

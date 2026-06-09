@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Copy, ImageIcon, Loader2, Plus, Send, Sparkles } from "lucide-react";
+import { Copy, Image, Loader2, Plus, Send, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { generate, projects as projectsApi, contents as contentsApi, Project } from "@/lib/api";
 import { cn } from "@/lib/utils";
@@ -302,7 +302,7 @@ export function GenerationStudio() {
               <Copy className="h-4 w-4" />
             </button>
             <button className="grid h-11 w-11 place-items-center border border-gray-700 transition hover:bg-white hover:text-black">
-              <ImageIcon className="h-4 w-4" />
+              <Image className="h-4 w-4" />
             </button>
             <button className="grid h-11 w-11 place-items-center border border-gray-700 transition hover:bg-white hover:text-black">
               <Send className="h-4 w-4" />

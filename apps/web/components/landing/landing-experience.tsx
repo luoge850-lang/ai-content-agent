@@ -12,9 +12,9 @@ import {
   Code2,
   Cpu,
   Database,
-  Dock,
+  Container,
+  ExternalLink,
   FileText,
-  Github,
   Layers,
   Lock,
   Mail,
@@ -59,7 +59,7 @@ const TECH_HIGHLIGHTS = [
   { icon: FileText, label: "Content Management System", desc: "CRUD content library with status workflow, inline editing, search & filter" },
   { icon: BarChart3, label: "Analytics Dashboard", desc: "Per-platform metrics aggregation, content ranking, demo analytics views" },
   { icon: Palette, label: "Editorial B&W Design System", desc: "Custom design tokens, Framer Motion animations, responsive layout, a11y" },
-  { icon: Dock, label: "Docker-Ready Infrastructure", desc: "Docker Compose with PostgreSQL, Redis, Celery worker, Nginx reverse proxy" },
+  { icon: Container, label: "Docker-Ready Infrastructure", desc: "Docker Compose with PostgreSQL, Redis, Celery worker, Nginx reverse proxy" },
   { icon: Braces, label: "Async AI Generation Pipeline", desc: "Background task processing with polling UI, graceful fallback on API errors" },
 ];
 
@@ -201,7 +201,7 @@ export function LandingExperience() {
               href="#about"
               className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-6 py-3.5 text-[15px] font-medium text-[#111] transition hover:-translate-y-0.5 hover:border-black hover:shadow-editorial"
             >
-              <Github className="h-5 w-5" />
+              <ExternalLink className="h-5 w-5" />
               View GitHub
             </a>
           </motion.div>
@@ -492,7 +492,7 @@ export function LandingExperience() {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
           {/* TODO: Replace with real links */}
           <a href="#" className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-5 py-3 text-sm font-medium transition hover:border-black hover:-translate-y-0.5">
-            <Github className="h-4 w-4" /> GitHub
+            <ExternalLink className="h-4 w-4" /> GitHub
           </a>
           <a href="#" className="inline-flex items-center gap-2 rounded-md border border-gray-300 bg-white px-5 py-3 text-sm font-medium transition hover:border-black hover:-translate-y-0.5">
             <FileText className="h-4 w-4" /> Resume

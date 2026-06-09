@@ -10,7 +10,7 @@ import {
   Edit3,
   Eye,
   Heart,
-  ImageIcon,
+  Image,
   Loader2,
   Send,
   Sparkles,
@@ -292,7 +292,7 @@ export default function ContentDetailPage() {
                     }}
                     className="flex items-center gap-2 border border-gray-300 bg-white px-5 py-3 text-sm transition hover:border-black hover:bg-black hover:text-white"
                   >
-                    <ImageIcon className="h-4 w-4" />
+                    <Image className="h-4 w-4" />
                     Copy Image Prompt
                   </button>
                 </motion.div>
@@ -308,7 +308,7 @@ export default function ContentDetailPage() {
                   className="relative overflow-hidden border border-gray-300 bg-[#111] p-8 text-white"
                 >
                   <div className="flex items-center gap-2">
-                    <ImageIcon className="h-4 w-4 text-gray-500" />
+                    <Image className="h-4 w-4 text-gray-500" />
                     <p className="mono-label text-gray-500">Image Prompt</p>
                   </div>
                   <p className="mt-2 text-[10px] text-gray-600">

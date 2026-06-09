@@ -13,7 +13,7 @@ import {
   Code2,
   Cpu,
   Database,
-  Dock,
+  Container,
   ExternalLink,
   FileText,
   Folder,
@@ -219,7 +219,7 @@ export default function CaseStudyPage() {
               },
               {
                 category: "DevOps",
-                icon: Dock,
+                icon: Container,
                 items: ["Docker + Compose", "Nginx reverse proxy", "Celery + Redis", "Health checks", "Security headers"],
               },
               {
@@ -261,7 +261,7 @@ export default function CaseStudyPage() {
               { icon: FileText, label: "Content Library", desc: "CRUD content management with status workflow, search, filter, and inline editing." },
               { icon: BarChart3, label: "Analytics Dashboard", desc: "Per-platform metrics, content ranking, and aggregation (demo data for portfolio)." },
               { icon: Palette, label: "Design System", desc: "Strict editorial B&W palette, custom animation presets, responsive all pages." },
-              { icon: Dock, label: "Docker Infrastructure", desc: "6-service Compose with PostgreSQL, Redis, Celery, Nginx, health checks." },
+              { icon: Container, label: "Docker Infrastructure", desc: "6-service Compose with PostgreSQL, Redis, Celery, Nginx, health checks." },
               { icon: Braces, label: "Async Generation", desc: "Background AI processing with frontend polling, graceful API error fallback." },
             ].map((feat) => (
               <div key={feat.label} className="border border-gray-200 bg-white p-5">
@@ -501,7 +501,7 @@ export default function CaseStudyPage() {
                 { icon: Database, label: "Data Modeling", desc: "Designing relational schemas for multi-tenant SaaS — UUID PKs, ownership via FK relationships, audit logs, and separation of editorial status from generation status." },
                 { icon: Lock, label: "Security Thinking", desc: "bcrypt hashing, JWT token flow, ownership enforcement on every query, rate limiting, input validation, and security headers — security is not a feature, it's a layer." },
                 { icon: Palette, label: "Design Engineering", desc: "Building a consistent design system from scratch — typography scale, spacing grid, animation presets, accessibility — is as rigorous as backend engineering." },
-                { icon: Dock, label: "DevOps", desc: "Containerizing a multi-service application with Docker Compose, configuring health checks, connection pooling, and production WSGI servers turns a dev project into deployable infrastructure." },
+                { icon: Container, label: "DevOps", desc: "Containerizing a multi-service application with Docker Compose, configuring health checks, connection pooling, and production WSGI servers turns a dev project into deployable infrastructure." },
               ].map((item) => (
                 <div key={item.label} className="border border-gray-200 bg-white p-5">
                   <item.icon className="h-5 w-5 text-gray-400" />
