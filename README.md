@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/screenshots/logo.png" alt="AI Content Agent" width="120" />
+  <img src="screenshot.png" alt="AI Content Agent Screenshot" width="800" />
 </p>
 
 <h1 align="center">AI Content Agent</h1>
@@ -1265,19 +1265,14 @@ If the `LICENSE` file is not present yet, please add it before relying on the MI
     <td><a href="https://github.com/luoge850-lang">@luoge850-lang</a></td>
   </tr>
   <tr>
-    <td><strong>Email</strong></td>
-    <td>Available upon request</td>
+    <td><strong>Project Type</strong></td>
+    <td>Personal portfolio project</td>
   </tr>
   <tr>
-    <td><strong>Resume</strong></td>
-    <td>TODO: Add resume link</td>
-  </tr>
-  <tr>
-    <td><strong>Portfolio</strong></td>
-    <td>Coming soon</td>
+    <td><strong>Focus Areas</strong></td>
+    <td>Full-stack development, AI integration, SaaS architecture, prompt engineering</td>
   </tr>
 </table>
-
 ---
 
 <p align="center">
