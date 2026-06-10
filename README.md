@@ -1161,46 +1161,6 @@ See [DEPLOY.md](DEPLOY.md) for more details.
 
 ---
 
-## 🗺️ Roadmap
-
-### Phase A — Production Readiness
-
-- [x] Docker Compose with PostgreSQL, Redis, Celery, Nginx
-- [x] Celery task queue configuration with multiple queues prepared
-- [x] Redis-based rate limiting
-- [x] Email verification code implemented
-- [x] Password hashing, JWT auth, ownership checks
-- [x] Security headers through Nginx
-- [ ] Public live demo deployment
-- [ ] HTTPS with domain
-- [ ] Switch local AI generation fully from `asyncio.create_task` to Celery worker execution
-- [ ] Add automated tests for auth, generation, and ownership checks
-
----
-
-### Phase B — Feature Depth
-
-- [ ] Content version history
-- [ ] Markdown / TXT / CSV export
-- [ ] Manual analytics input
-- [ ] Content calendar view
-- [ ] Image generation integration
-- [ ] Content quality checklist per platform
-- [ ] Product-link-to-structured-brief extraction
-
----
-
-### Phase C — Scale & Monetization
-
-- [ ] Team collaboration and role-based access control
-- [ ] Subscription billing concept
-- [ ] Direct social platform publishing APIs
-- [ ] Real social analytics integration
-- [ ] Brand voice memory with embedding-based retrieval
-- [ ] White-label version for agencies
-- [ ] International platform support
-
----
 
 ## 📝 Portfolio Notes
 
@@ -1276,5 +1236,5 @@ If the `LICENSE` file is not present yet, please add it before relying on the MI
 ---
 
 <p align="center">
-  <sub>Built with ♥ using Next.js 14, FastAPI, DeepSeek, SQLAlchemy, and Docker.</sub>
+  <sub>using Next.js 14, FastAPI, DeepSeek, SQLAlchemy, and Docker.</sub>
 </p>
