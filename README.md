@@ -46,7 +46,7 @@
 - [Portfolio Notes](#-portfolio-notes)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Author](#-author)
+- [Author](#-author) 
 
 ---
 
