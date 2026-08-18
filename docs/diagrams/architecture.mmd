@@ -1,0 +1,10 @@
+flowchart LR
+  C["Browser"] --> W["Next.js web"]
+  W --> A["FastAPI API"]
+  A --> G["Generation workflow"]
+  G --> L["DeepSeek API"]
+  G --> K["Knowledge-context injection"]
+  G --> S["Content lifecycle"]
+  S --> DB["SQLite / PostgreSQL"]
+  A --> Q["Celery + Redis"]
+  A --> N["Nginx + API workers"]
