@@ -102,8 +102,36 @@ AI Content Agent solves this through a structured AI content workflow:
 5. **Manage** — Content lifecycle: Draft → Review → Published
 6. **Analyze** — Demo analytics for content count, platform performance, and stored metrics
 
-> This project uses **Knowledge Base Context Injection**, inspired by RAG-style workflows.  
+> This project uses **Knowledge Base Context Injection**, inspired by RAG-style workflows.
 > It does not currently implement embedding-based vector retrieval, chunking, or top-k semantic search.
+
+## Portfolio positioning and honest scope
+
+This repository demonstrates AI application productization: a structured
+content-generation workflow with platform-specific prompting, knowledge-context
+injection, asynchronous generation, content lifecycle management, and a
+full-stack service boundary.
+
+The word **Agent** describes the product workflow, not a claim of a general
+autonomous planning system. The current version does not expose an autonomous
+planner, arbitrary tool selection, embedding-based retrieval, or long-term
+agent memory. Keeping this boundary explicit makes the project easier to
+evaluate and reproduce.
+
+## Evaluation boundary
+
+The repository documents the implemented workflow and local deployment path.
+It does not currently report a human-rated text-quality benchmark, a
+platform-specific engagement study, or a controlled comparison against a
+non-context baseline.
+
+Suggested next evaluation, without inventing results:
+
+- Build a small fixed prompt set covering all four platforms and three tones.
+- Compare plain prompting against knowledge-context injection.
+- Rate factual consistency, platform-format compliance, tone adherence, and
+  edit distance using a documented rubric.
+- Report failures and abstentions alongside successful examples.
 
 ---
 
@@ -232,6 +260,16 @@ You can also click the **“Continue with Demo Account”** button on the login 
 
 ## 🏗️ Architecture
 
+<p align="center">
+  <img src="docs/diagrams/architecture.svg" alt="AI Content Agent product architecture" width="100%" />
+</p>
+
+> The SVG is the primary portfolio view. The editable source is available at
+> [`docs/diagrams/architecture.mmd`](docs/diagrams/architecture.mmd).
+
+<details>
+<summary>Detailed text fallback and request sequence</summary>
+
 ```text
                               ┌──────────────────────────┐
                               │      Browser / Client     │
@@ -357,6 +395,8 @@ Client                    Backend                       DeepSeek API
 ```
 
 ---
+
+</details>
 
 ## 📁 Project Structure
 
